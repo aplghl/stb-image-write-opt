@@ -1,5 +1,9 @@
 # stb-image-write-opt
 
+[![CI](https://github.com/aplghl/stb-image-write-opt/actions/workflows/ci.yml/badge.svg)](https://github.com/aplghl/stb-image-write-opt/actions/workflows/ci.yml)
+[![Latest release](https://img.shields.io/github/v/release/aplghl/stb-image-write-opt)](https://github.com/aplghl/stb-image-write-opt/releases/latest)
+[![License: MIT OR Unlicense](https://img.shields.io/badge/license-MIT%20OR%20Unlicense-blue.svg)](#license)
+
 A performance fork of [stb_image_write](https://github.com/nothings/stb)
 (`stb_image_write.h` v1.16) that is a **byte-identical drop-in replacement**.
 The PNG deflate match kernel is accelerated with baseline SSE2, the fixed
