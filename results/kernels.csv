@@ -1,0 +1,15 @@
+variant,kernel,metric,value,unit
+sse2,countm_L3,ns_per_call,1.410,ns
+sse2,countm_L8,ns_per_call,1.414,ns
+sse2,countm_L16,ns_per_call,1.408,ns
+sse2,countm_L64,ns_per_call,1.413,ns
+sse2,countm_L258,ns_per_call,1.408,ns
+sse2,deflate,ns_per_byte,0.4276,ns
+sse2,deflate,compressed_bytes,3192,bytes
+scalar,countm_L3,ns_per_call,4.804,ns
+scalar,countm_L8,ns_per_call,4.808,ns
+scalar,countm_L16,ns_per_call,4.624,ns
+scalar,countm_L64,ns_per_call,4.582,ns
+scalar,countm_L258,ns_per_call,3.540,ns
+scalar,deflate,ns_per_byte,1.4656,ns
+scalar,deflate,compressed_bytes,3192,bytes

@@ -1,0 +1,13 @@
+# Sanitizer ignorelist for KNOWN, PRE-EXISTING upstream behavior. The shift
+# overflow in stbiw__jpg_writeBits fires in the pristine oracle too (verified:
+# upstream/stb_image_write.h:1263) and is not introduced by this fork.
+#
+# stbiw__jpg_writeBits accumulates Huffman codes in a signed int:
+#     bitBuf |= bs[0] << (24 - bitCnt);
+# For 16-bit codes bs[0] this can set the sign bit (left shift not
+# representable). The value is consumed only byte-wise ((bitBuf >> 16) & 255)
+# and shifted back out, so excess bits are discarded and the emitted JPEG byte
+# stream is unaffected. Fixing it would change upstream arithmetic, which the
+# oracle forbids; we scope the instrumentation off for this one function so all
+# other shift/overflow checks stay active for new code.
+fun:stbiw__jpg_writeBits
